@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog – How I Built My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm-1 15L5 14v-4l6 3v4zm2 0l6-3v-4l-6 3v4zm-1-7L6 7l6-3 6 3-6 3z"></path>
+                </svg>
+            </div>
+            <h1>Anurag Pandey</h1>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" class="active">Blogs</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+            <h2 style="margin-bottom: 1rem;">How I Built My Portfolio Site</h2>
+            <p><strong>Published:</strong> May 1, 2025</p>
+            <p style="margin: 1rem 0;">
+                Building my portfolio website was an exciting journey where I combined aesthetics with simplicity.
+                I started by drafting the layout using HTML5 and styled it using CSS3 with responsiveness in mind.
+                A major focus was the clean dark/light mode toggle using CSS variables and JavaScript.
+            </p>
+            <p style="margin: 1rem 0;">
+                I chose to host the project on GitHub Pages for its ease and speed. Additionally, I used FontAwesome
+                for icons and ensured the entire site is accessible and mobile-friendly. One of the best parts was
+                structuring the blog to scale in the future, which you're reading now.
+            </p>
+            <p style="margin: 1rem 0;">
+                I plan to continue enhancing the site with JavaScript interactivity, animations, and maybe even some 
+                React components as I grow.
+            </p>
+            <p style="margin-top: 2rem;">
+                <a href="blog.html">← Back to Blog List</a>
+            </p>
+        </article>
+    </main>
+
+    <script>
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>
