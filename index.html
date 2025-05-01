@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Pandey - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm-1 15L5 14v-4l6 3v4zm2 0l6-3v-4l-6 3v4zm-1-7L6 7l6-3 6 3-6 3z"></path>
+                </svg>
+            </div>
+            <h1>Anurag Pandey</h1>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="welcome-section">
+            <div class="avatar">
+                <svg viewBox="0 0 100 100" width="120" height="120">
+                    <circle cx="50" cy="35" r="20" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="M30 60 Q50 80 70 60" fill="none" stroke="currentColor" stroke-width="2" />
+                    <rect x="30" y="60" width="40" height="30" fill="none" stroke="currentColor" stroke-width="2" />
+                    <ellipse cx="50" cy="75" rx="10" ry="5" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+            </div>
+            <h2>Welcome! <span class="wave">👋</span></h2>
+            <p class="quote">
+                Fun for Programming. If you wish to truly understand something, try to look at it from all
+                directions. It never harms to listen to whatever anyone has to say about anything.
+            </p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="projects-section">
+            <a href="#" class="project-link">
+                PaperReviewTool (Check it Out!)
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Simple theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>
