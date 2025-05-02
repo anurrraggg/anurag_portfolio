@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                    <path d="M15 9l-3 3-3-3"></path>
+                    <path d="M12 12v6"></path>
+                </svg>
+            </div>
+            <h1 class="site-title">Tejas Anand</h1>
+        </div>
+        <div class="right-nav">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/blogs">Blogs</a></li>
+                    <li><a href="/about" class="active">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <h2>Abouts</h2>
+        </div>
+
+        <article class="content-card">
+            <h2>About</h2>
+            <p>
+                If you want to know me, this is the correct place to be. First of all I understand that you must be having some preconceived notion of what kind of a human being I am. But the human mind is so complex even th...
+            </p>
+            <div class="article-meta">
+                <time datetime="2024-06-30">June 30, 2024</time>
+                <span class="reading-time">2 min</span>
+                <span class="author">Tejas Anand</span>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        // Simple dark mode toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
