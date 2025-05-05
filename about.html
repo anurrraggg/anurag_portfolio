@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <meta name="description" content="Anurag Pandey's personal website - blogs, projects, and more.">
+    <title>Anurag Pandey | Personal Website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="logo-container">
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                     fill="none" stroke="currentColor" stroke-width="2" 
+                     stroke-linecap="round" stroke-linejoin="round" aria-label="Logo">
                     <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
                     <path d="M15 9l-3 3-3-3"></path>
                     <path d="M12 12v6"></path>
@@ -19,9 +23,12 @@
             </div>
             <h1 class="site-title">Anurag Pandey</h1>
         </div>
+
         <div class="right-nav">
             <button class="theme-toggle" aria-label="Toggle dark mode">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                     fill="none" stroke="currentColor" stroke-width="2" 
+                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
                 </svg>
             </button>
@@ -38,16 +45,18 @@
     <main>
         <div class="breadcrumb">
             <a href="/">Home</a>
-            <h2>Abouts</h2>
+            <h2>About</h2>
         </div>
 
         <article class="content-card">
             <h2>About</h2>
             <p>
-                If you want to know me, this is the correct place to be. First of all I understand that you must be having some preconceived notion of what kind of a human being I am. But the human mind is so complex even th...
+                If you want to know me, this is the correct place to be. First of all, 
+                I understand that you must be having some preconceived notion of what 
+                kind of a human being I am. But the human mind is so complex even th...
             </p>
             <div class="article-meta">
-                <time datetime="2024-06-30">May,2 2025</time>
+                <time datetime="2025-05-02">May 2, 2025</time>
                 <span class="reading-time">2 min</span>
                 <span class="author">Anurag Pandey</span>
             </div>
@@ -55,7 +64,6 @@
     </main>
 
     <script>
-      
         const themeToggle = document.querySelector('.theme-toggle');
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
