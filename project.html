@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Pandey - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 011-1 1.5 1.5 0 10-1.471-1.794l-1.962-.393A3.5 3.5 0 1113 13.355z"></path>
+                    </svg>
+                </div>
+                <h1 href="index.html" class="site-title">Anurag Pandey</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html" class="active">Projects</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="#">Home</a>
+            </div>
+            
+            <h2 class="page-title">Projects</h2>
+            
+            <div class="projects-container">
+                <article class="project-card">
+                    <h3 class="project-title">Market Making Limit OrderBook</h3>
+                    <p class="project-description">
+                        During the summer in kyoto I got the chance to participate in a simulated trading event called Trade-A-Thon 
+                        organized by Optiver. It was an exciting event for me, as I learnt about market making and what an order...
+                    </p>
+                    <div class="project-meta">
+                        <span class="project-date">May 6, 2025</span>
+                        <span class="project-separator">·</span>
+                        <span class="project-reading-time">1 min</span>
+                        <span class="project-separator">·</span>
+                        <span class="project-author">Anurag Pandey</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple dark mode toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
