@@ -3,62 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <title>Anurag Pandey</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        nav a.active {
+            color: #000;
+            font-weight: 500;
+            border-bottom: 2px solid #000;
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        /* Main content */
+        main {
+            padding: 40px 0;
+        }
+
+        .breadcrumb {
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        /* Card */
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .card-content {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: #777;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-meta span {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-meta span:not(:last-child)::after {
+            content: "•";
+            margin: 0 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
-                    <path d="M15 9l-3 3-3-3"></path>
-                    <path d="M12 12v6"></path>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <svg class="logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 16L16 12L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
+                <a href="index.html" class="site-title">Anurag Pandey</a>
             </div>
-            <h1 class="site-title">Anurag Pandey</h1>
-        </div>
-        <div class="right-nav">
-            <button class="theme-toggle" aria-label="Toggle dark mode">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-                </svg>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/blogs">Blogs</a></li>
-                    <li><a href="/about" class="active">About</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div class="breadcrumb">
-            <a href="/">Home</a>
-            <h2>Abouts</h2>
-        </div>
-
-        <article class="content-card">
-            <h2>About</h2>
-            <p>
-                If you want to know me, this is the correct place to be. First of all I understand that you must be having some preconceived notion of what kind of a human being I am. But the human mind is so complex even th...
-            </p>
-            <div class="article-meta">
-                <time datetime="2024-06-30">May,2 2025</time>
-                <span class="reading-time">2 min</span>
-                <span class="author">Anurag Pandey</span>
+            <div style="display: flex; align-items: center;">
+                <nav>
+                    <ul>
+                        <li><a href="/blog.html">Blogs</a></li>
+                        <li><a href="/about.html" class="active">About</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.93 4.93L6.34 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.66 17.66L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.34 17.66L4.93 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.07 4.93L17.66 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
-        </article>
-    </main>
+        </header>
+
+        <main>
+            <div class="breadcrumb">Home</div>
+            <h1 class="page-title">Abouts</h1>
+
+            <div class="card">
+                <h2 class="card-title">About</h2>
+                <p class="card-content">
+                    If you want to know me, this is the correct place to be. First of all I understand that you must be having some preconceived notion of what kind of a human being I am. But the human mind is so complex even the thought of having a preconceived notion seems funny to me. <br>
+<br>
+What fascinates me is the fact that we are all so different from each other. We all have our own unique experiences, our own unique way of looking at the world. And that is what makes us so special. <br>
+                    <br>
+
+Ok, enough with the preface, I am passionate about computer science and machine learning. I love to code and spend my free time discussing new topics related to software and technology. But that is not what gives me true happiness in life. <br><br>
+
+What gives me true happiness in life is writing songs and playing football. These are the two things in the world that bring me unconditional joy, no matter the time, day, or my mental state. <br><br>
+
+I also have this habit of making myself work. Really. It is my mind that pushes me to work. But if you ask my standalone opinion of work, it would be starkly different from what you see my behavior in real life. Maybe it is because I love what I do ? I don’t know. (I think I use the phrase “I don’t know” a lot, but that is the truth (maybe the same is true for love as well.)). It is in my opinion better to say “I don’t know” and learn something new as compared to saying “I know” and not learning anything new. Having an ego is one of the worst things human beings possess, but at the same time we must not forget that it is a “human” quality.
+                </p>
+                <div class="card-meta">
+                    <span>May 3, 2025</span>
+                    <span>2 min</span>
+                    <span>Anurag Pandey</span>
+                </div>
+            </div>
+        </main>
+    </div>
 
     <script>
-      
+        // Simple dark mode toggle functionality
         const themeToggle = document.querySelector('.theme-toggle');
+        
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.style.backgroundColor = '#121212';
+                document.body.style.color = '#e0e0e0';
+                document.querySelectorAll('.card').forEach(card => {
+                    card.style.backgroundColor = '#1e1e1e';
+                    card.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.2)';
+                });
+                document.querySelector('.site-title').style.color = '#e0e0e0';
+                document.querySelectorAll('.card-title, .page-title').forEach(title => {
+                    title.style.color = '#f0f0f0';
+                });
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.style.color = '#aaa';
+                });
+                document.querySelectorAll('nav a.active').forEach(link => {
+                    link.style.color = '#fff';
+                });
+            } else {
+                document.body.style.backgroundColor = '#f9f9f9';
+                document.body.style.color = '#333';
+                document.querySelectorAll('.card').forEach(card => {
+                    card.style.backgroundColor = '#fff';
+                    card.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.05)';
+                });
+                document.querySelector('.site-title').style.color = '#333';
+                document.querySelectorAll('.card-title, .page-title').forEach(title => {
+                    title.style.color = '#222';
+                });
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.style.color = '#555';
+                });
+                document.querySelectorAll('nav a.active').forEach(link => {
+                    link.style.color = '#000';
+                });
+            }
         });
     </script>
 </body>
