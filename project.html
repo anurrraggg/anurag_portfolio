@@ -3,68 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Pandey - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <title>Anurag Pandey - Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo-container">
-                <div class="logo">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 011-1 1.5 1.5 0 10-1.471-1.794l-1.962-.393A3.5 3.5 0 1113 13.355z"></path>
-                    </svg>
-                </div>
-                <h1 href="index.html" class="site-title">Anurag Pandey</h1>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="blog.html">Blogs</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="project.html" class="active">Projects</a></li>
-                </ul>
-            </nav>
-            <button class="theme-toggle" aria-label="Toggle dark mode">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <div class="logo-container">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 10l3 3 3-3" fill="none" stroke="currentColor" stroke-width="2"/>
                 </svg>
-            </button>
+            </div>
+            <h1 href="index.html" class="site-title">Anurag Pandey</h1>
         </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="blog.html" class="nav-link">Blogs</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="project.html" class="nav-link">Projects</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="#">Home</a>
-            </div>
-            
-            <h2 class="page-title">Projects</h2>
-            
-            <div class="projects-container">
-                <article class="project-card">
-                    <h3 class="project-title">Market Making Limit OrderBook</h3>
-                    <p class="project-description">
-                        During the summer in kyoto I got the chance to participate in a simulated trading event called Trade-A-Thon 
-                        organized by Optiver. It was an exciting event for me, as I learnt about market making and what an order...
-                    </p>
-                    <div class="project-meta">
-                        <span class="project-date">May 6, 2025</span>
-                        <span class="project-separator">·</span>
-                        <span class="project-reading-time">1 min</span>
-                        <span class="project-separator">·</span>
-                        <span class="project-author">Anurag Pandey</span>
-                    </div>
-                </article>
-            </div>
+        <div class="breadcrumb">
+            <a href="#">Home</a>
+        </div>
+        
+        <h2 class="page-title">Project</h2>
+        
+        <div class="blog-posts">
+            <article class="blog-card">
+                <h3 class="blog-title">
+                    <a href="#">AnnotateX – Smart Reviews Made Simple</a>
+                </h3>
+                <p class="blog-excerpt">
+                    AnnotateX is an open-source web app that streamlines academic paper reviews through collaborative PDF annotation. Built with Django and React, it allows users to upload papers, highlight content, and add threaded comments for detailed feedback. The platform supports real-time collaboration, making it ideal for research groups, peer reviewers, and educators. Secure authentication ensures only authorized users can review and comment. Its clean, interactive UI enhances the reviewing experience. Whether for academic peer review or classroom analysis, AnnotateX simplifies feedback and boosts engagement.
+                </p>
+                <div class="blog-meta">
+                    <span class="blog-date">May 1, 2025</span>
+                    <span class="blog-separator">·</span>
+                    <span class="blog-reading-time">3 min</span>
+                    <span class="blog-separator">·</span>
+                    <span class="blog-author">Anurag Pandey</span>
+                </div>
+            </article>
         </div>
     </main>
-
-    <script>
-        const themeToggle = document.querySelector('.theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
 </body>
 </html>
