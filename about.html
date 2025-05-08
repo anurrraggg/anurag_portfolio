@@ -3,56 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Pandey - Projects</title>
-    <link rel="stylesheet" href="blog.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Anurag Pandey | Personal Website</title>
+    <meta name="description" content="Anurag Pandey's personal website - blogs, projects, and more.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <div href="index.html" class="logo-container">
+        <div class="logo-container">
             <div class="logo">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <path d="M9 10l3 3 3-3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                     fill="none" stroke="currentColor" stroke-width="2" 
+                     stroke-linecap="round" stroke-linejoin="round" aria-label="Logo">
+                    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                    <path d="M15 9l-3 3-3-3"></path>
+                    <path d="M12 12v6"></path>
                 </svg>
             </div>
-            <h1 href="index.html" class="site-title">Anurag Pandey</h1>
+            <h1 class="site-title">Anurag Pandey</h1>
         </div>
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="blog.html" class="nav-link">Blogs</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="project.html" class="nav-link">Projects</a></li>
-            </ul>
-        </nav>
+        <div class="right-nav">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                     fill="none" stroke="currentColor" stroke-width="2" 
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+            </button>
+        </div>
     </header>
 
     <main>
         <div class="breadcrumb">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
+            <h2>About</h2>
         </div>
-        
-        <h2 class="page-title">Project</h2>
-        
-        <div class="blog-posts">
-            <article class="blog-card">
-                <h3 class="blog-title">
-                    <a href="#"> Paper Review Tool </a>
-                </h3>
-                <p href="https://github.com/anurrraggg/PaperReviewTool" class="blog-excerpt">
-                    Built a Python-based academic paper reviewing tool during a hackathon at IIT Kharagpur. The goal was to simplify the research paper review process by offering a smarter and more structured way to analyze content. While the project is still in its early phase, it reflects my initiative to explore real-world research challenges. I collaborated with peers, brainstormed solutions, and quickly prototyped features under time constraints. The repo showcases my ability to take a vague idea and build a working prototype from scratch. It’s not perfect yet—but it’s a great start and something I’m proud to have contributed to.
-                </p>
-                <div class="blog-meta">
-                    <span class="blog-date">May 5, 2025</span>
-                    <span class="blog-separator">·</span>
-                    <span class="blog-reading-time">1 min</span>
-                    <span class="blog-separator">·</span>
-                    <span class="blog-author">Anurag Pandey</span>
-                </div>
-            </article>
-        </div>
+
+        <article class="content-card">
+            <h2>About</h2>
+            <p>
+                If you want to know me, this is the correct place to be. First of all I understand that you must be having some preconceived notion of what kind of a human being I am. But the human mind is so complex even the thought of having a preconceived notion seems funny to me.
+            </p>
+            <p>
+                What fascinates me is the fact that we are all so different from each other. We all have our own unique experiences, our own unique way of looking at the world. And that is what makes us so special.
+            </p>
+            <p>
+                Ok, enough with the preface, I am passionate about computer science and machine learning. I love to code and spend my free time discussing new topics related to software and technology. But that is not what gives me true happiness in life.
+            </p>
+            <p>
+                What gives me true happiness in life is writing songs and playing football. These are the two things in the world that bring me unconditional joy, no matter the time, day, or my mental state.
+            </p>
+            <p>
+                I also have this habit of making myself work. Really. It is my mind that pushes me to work. But if you ask my standalone opinion of work, it would be starkly different from what you see my behavior in real life. Maybe it is because I love what I do? I don’t know. (I think I use the phrase “I don’t know” a lot, but that is the truth — maybe the same is true for love as well.) It is, in my opinion, better to say “I don’t know” and learn something new as compared to saying “I know” and not learning anything new. Having an ego is one of the worst things human beings possess, but at the same time we must not forget that it is a “human” quality.
+            </p>
+            <div class="article-meta">
+                <time datetime="2025-05-02">May 2, 2025</time>
+                <span class="reading-time">2 min</span>
+                <span class="author">Anurag Pandey</span>
+            </div>
+        </article>
     </main>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
