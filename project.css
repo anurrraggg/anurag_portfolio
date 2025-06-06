@@ -104,11 +104,15 @@ main {
 
 /* Blog card styles */
 .blog-card {
+    width: 100%;
+    max-width: 100%;
     padding: 1.5rem;
     border: 1px solid #f1f1f1;
     border-radius: var(--border-radius);
     margin-bottom: 1.5rem;
     transition: box-shadow 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .blog-card:hover {
